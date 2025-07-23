@@ -1,46 +1,51 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
-  background-color: #fff;
-  color: #333;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #000;
 }
 
-h1 {
-  color: fuchsia;
+.titulo-principal {
+  background-color: #ff00aa;
+  color: #fff;
   text-align: center;
+  padding: 20px;
+  margin: 0;
+  font-size: 28px;
 }
 
 #porcentaje-avance {
   text-align: center;
+  font-size: 18px;
+  margin: 15px 0;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
-#malla-container {
+.malla {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   overflow-x: auto;
   gap: 20px;
-  padding-bottom: 30px;
+  padding: 20px;
 }
 
 .anio {
   flex: 0 0 auto;
-  width: 320px;
-  border: 2px solid #ccc;
+  background: #fff;
+  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
-  background-color: #f9f9f9;
+  min-width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .anio h2 {
+  background-color: #e0e0e0;
   text-align: center;
-  background-color: #eee;
-  border-bottom: 1px solid #ccc;
-  padding: 5px 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+  padding: 8px;
+  border-radius: 4px;
   color: #000;
 }
 
@@ -52,41 +57,50 @@ h1 {
 
 .semestre {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .semestre h3 {
   text-align: center;
-  font-size: 1em;
   margin: 5px 0;
-  color: #555;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 4px;
 }
 
 .ramo {
-  padding: 5px;
-  margin: 4px 0;
+  padding: 8px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9em;
-  border: 1px solid #ccc;
+  border: 1px solid #999;
+  font-size: 14px;
+  transition: background 0.2s ease;
 }
 
+/* Colores por tipo de ramo */
 .ramo.obligatorio {
-  background-color: #ffd1dc; /* rosado pastel */
+  background-color: #ffc0cb; /* rosado pastel */
 }
 
 .ramo.general {
-  background-color: #d3f4ff; /* celeste pastel */
+  background-color: #add8e6; /* celeste pastel */
 }
 
 .ramo.investigacion {
-  background-color: #e1d1ff; /* morado pastel */
+  background-color: #dda0dd; /* morado pastel */
 }
 
 .ramo.idiomas {
-  background-color: #d0f0c0; /* verde pastel */
+  background-color: #90ee90; /* verde pastel */
 }
 
+/* Estado aprobado */
 .ramo.aprobado {
   text-decoration: line-through;
   opacity: 0.6;
+  background-color: #dcdcdc !important;
+  border-color: #888;
 }
