@@ -102,7 +102,7 @@ const ramos = [
     semestre: 2,
     prerequisitos: ["INGLÉS I"]
   }
-];
+);
 
 const mallaContainer = document.getElementById("malla-container");
 
@@ -234,6 +234,7 @@ ramos.push(
     semestre: 4,
     prerequisitos: ["INGLÉS III"]
   }
+);
 
 // Crear columna del Año 2 (semestres 3 y 4)
 crearColumnaAnio(2, [3, 4]);
@@ -461,6 +462,8 @@ ramos.push(
     semestre: 8,
     prerequisitos: ["MÓDULO INTEGRADO, INTERDISCIPLINARIO Y MULTIPROFESIONAL I"]
   }
+  );
+
 
 // Crear columna del Año 4 (semestres 7 y 8)
 crearColumnaAnio(4, [7, 8]);
@@ -511,6 +514,7 @@ ramos.push(
     semestre: 10,
     prerequisitos: ["INTERVENCIÓN PROFESIONAL I"]
   }
+  );
 
 // Crear columna del Año 5 (semestres 9 y 10)
 crearColumnaAnio(5, [9, 10]);
