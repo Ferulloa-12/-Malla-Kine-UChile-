@@ -2,24 +2,24 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #fefefe;
   color: #000;
 }
 
 .titulo-principal {
-  background-color: #ff00aa;
-  color: #fff;
+  color: #ec7fa6; /* Rosado pastel fucsia */
   text-align: center;
-  padding: 20px;
-  margin: 0;
+  padding: 20px 0;
   font-size: 28px;
+  font-weight: bold;
 }
 
 #porcentaje-avance {
   text-align: center;
   font-size: 18px;
-  margin: 15px 0;
+  margin: 10px 0 20px;
   font-weight: bold;
+  color: #444;
 }
 
 .malla {
@@ -27,26 +27,26 @@ body {
   flex-direction: row;
   overflow-x: auto;
   gap: 20px;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .anio {
   flex: 0 0 auto;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   padding: 10px;
   min-width: 300px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .anio h2 {
-  background-color: #e0e0e0;
+  background-color: #f2f2f2;
   text-align: center;
   margin: 0 0 10px;
-  padding: 8px;
-  border-radius: 4px;
-  color: #000;
+  padding: 10px;
+  border-radius: 6px;
+  color: #333;
 }
 
 .semestres {
@@ -59,48 +59,48 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .semestre h3 {
   text-align: center;
   margin: 5px 0;
-  font-size: 16px;
-  background-color: #f0f0f0;
-  padding: 5px;
-  border-radius: 4px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  padding: 6px;
+  border-radius: 5px;
+  color: #555;
 }
 
 .ramo {
   padding: 8px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  border: 1px solid #999;
-  font-size: 14px;
+  border: 1px solid #ccc;
+  font-size: 13px;
   transition: background 0.2s ease;
 }
 
-/* Colores por tipo de ramo */
+/* Colores suaves */
 .ramo.obligatorio {
-  background-color: #ffc0cb; /* rosado pastel */
+  background-color: #ffe5ec; /* rosado pastel claro */
 }
 
 .ramo.general {
-  background-color: #add8e6; /* celeste pastel */
+  background-color: #e6f3fb; /* celeste pastel suave */
 }
 
 .ramo.investigacion {
-  background-color: #dda0dd; /* morado pastel */
+  background-color: #f1e3fa; /* morado pastel clarito */
 }
 
 .ramo.idiomas {
-  background-color: #90ee90; /* verde pastel */
+  background-color: #dbf7db; /* verde pastel suave */
 }
 
-/* Estado aprobado */
 .ramo.aprobado {
   text-decoration: line-through;
   opacity: 0.6;
-  background-color: #dcdcdc !important;
-  border-color: #888;
+  background-color: #eeeeee !important;
+  border-color: #bbb;
 }
