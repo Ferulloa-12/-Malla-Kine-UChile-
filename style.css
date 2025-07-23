@@ -1,93 +1,92 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff;
   margin: 0;
   padding: 20px;
+  background-color: #fff;
+  color: #333;
 }
 
-.titulo {
-  text-align: center;
+h1 {
   color: fuchsia;
-  margin-bottom: 30px;
+  text-align: center;
+}
+
+#porcentaje-avance {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 #malla-container {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 20px;
+  padding-bottom: 30px;
 }
 
 .anio {
-  display: flex;
-  flex-direction: column;
+  flex: 0 0 auto;
+  width: 320px;
   border: 2px solid #ccc;
   border-radius: 8px;
   padding: 10px;
-  width: 320px;
   background-color: #f9f9f9;
 }
 
 .anio h2 {
   text-align: center;
   background-color: #eee;
-  margin: 0;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  color: #000;
 }
 
 .semestres {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  margin-top: 10px;
 }
 
 .semestre {
   flex: 1;
-  background-color: #fafafa;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
 }
 
 .semestre h3 {
   text-align: center;
-  font-size: 16px;
-  margin-top: 0;
-  background-color: #e0e0e0;
-  padding: 5px;
-  border-radius: 4px;
+  font-size: 1em;
+  margin: 5px 0;
+  color: #555;
 }
 
 .ramo {
+  padding: 5px;
   margin: 4px 0;
-  padding: 6px;
-  font-size: 14px;
-  border: 1px solid #bbb;
   border-radius: 4px;
   cursor: pointer;
-  transition: transform 0.2s;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
 }
 
-.ramo:hover {
-  transform: scale(1.02);
+.ramo.obligatorio {
+  background-color: #ffd1dc; /* rosado pastel */
 }
 
-.obligatorio { background-color: #ffc0cb; }     /* Rosado pastel */
-.investigacion { background-color: #d8bfd8; }   /* Morado pastel */
-.general { background-color: #add8e6; }         /* Celeste pastel */
-.idiomas { background-color: #90ee90; }         /* Verde pastel */
+.ramo.general {
+  background-color: #d3f4ff; /* celeste pastel */
+}
+
+.ramo.investigacion {
+  background-color: #e1d1ff; /* morado pastel */
+}
+
+.ramo.idiomas {
+  background-color: #d0f0c0; /* verde pastel */
+}
 
 .ramo.aprobado {
   text-decoration: line-through;
   opacity: 0.6;
-}
-
-#porcentaje-avance {
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 30px;
 }
