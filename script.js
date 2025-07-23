@@ -102,7 +102,7 @@ const ramos = [
     semestre: 2,
     prerequisitos: ["INGLÉS I"]
   }
-);
+];
 
 const mallaContainer = document.getElementById("malla-container");
 
@@ -139,8 +139,6 @@ function crearColumnaAnio(anioNumero, semestres) {
   columna.appendChild(contenedorSemestres);
   mallaContainer.appendChild(columna);
 } // ← aquí termina correctamente
-// Crear columna del Año 1 (semestres 1 y 2)
-crearColumnaAnio(1, [1, 2]);
 
   // PARTE 2 – AÑO 2 (Semestres 3 y 4)
 ramos.push(
@@ -235,10 +233,6 @@ ramos.push(
     prerequisitos: ["INGLÉS III"]
   }
 );
-
-// Crear columna del Año 2 (semestres 3 y 4)
-crearColumnaAnio(2, [3, 4]);
-
 // PARTE 3 – AÑO 3 (Semestres 5 y 6)
 ramos.push(
   {
@@ -348,9 +342,7 @@ ramos.push(
     semestre: 6,
     prerequisitos: []
   }
-
-// Crear columna del Año 3 (semestres 5 y 6)
-crearColumnaAnio(3, [5, 6]);
+);
 // PARTE 4 – AÑO 4 (Semestres 7 y 8)
 ramos.push(
   {
@@ -461,12 +453,8 @@ ramos.push(
     tipo: "general",
     semestre: 8,
     prerequisitos: ["MÓDULO INTEGRADO, INTERDISCIPLINARIO Y MULTIPROFESIONAL I"]
-  }
-  );
-
-
-// Crear columna del Año 4 (semestres 7 y 8)
-crearColumnaAnio(4, [7, 8]);
+  } 
+);
 // PARTE 5 – AÑO 5 (Semestres 9 y 10)
 ramos.push(
   {
@@ -514,10 +502,8 @@ ramos.push(
     semestre: 10,
     prerequisitos: ["INTERVENCIÓN PROFESIONAL I"]
   }
-  );
+);
 
-// Crear columna del Año 5 (semestres 9 y 10)
-crearColumnaAnio(5, [9, 10]);
 function toggleAprobado(div, ramo) {
   if (div.classList.contains("aprobado")) {
     div.classList.remove("aprobado");
