@@ -138,8 +138,7 @@ function crearColumnaAnio(anioNumero, semestres) {
 
   columna.appendChild(contenedorSemestres);
   mallaContainer.appendChild(columna);
-}
-
+} // ← aquí termina correctamente
 // Crear columna del Año 1 (semestres 1 y 2)
 crearColumnaAnio(1, [1, 2]);
 
@@ -235,7 +234,6 @@ ramos.push(
     semestre: 4,
     prerequisitos: ["INGLÉS III"]
   }
-);
 
 // Crear columna del Año 2 (semestres 3 y 4)
 crearColumnaAnio(2, [3, 4]);
@@ -349,7 +347,6 @@ ramos.push(
     semestre: 6,
     prerequisitos: []
   }
-);
 
 // Crear columna del Año 3 (semestres 5 y 6)
 crearColumnaAnio(3, [5, 6]);
@@ -464,7 +461,6 @@ ramos.push(
     semestre: 8,
     prerequisitos: ["MÓDULO INTEGRADO, INTERDISCIPLINARIO Y MULTIPROFESIONAL I"]
   }
-);
 
 // Crear columna del Año 4 (semestres 7 y 8)
 crearColumnaAnio(4, [7, 8]);
@@ -515,7 +511,6 @@ ramos.push(
     semestre: 10,
     prerequisitos: ["INTERVENCIÓN PROFESIONAL I"]
   }
-);
 
 // Crear columna del Año 5 (semestres 9 y 10)
 crearColumnaAnio(5, [9, 10]);
