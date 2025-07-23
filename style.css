@@ -81,7 +81,7 @@ body {
   transition: background 0.2s ease;
 }
 
-/* Colores suaves */
+/* Colores suaves por tipo de ramo */
 .ramo.obligatorio {
   background-color: #ffe5ec; /* rosado pastel claro */
 }
@@ -98,9 +98,19 @@ body {
   background-color: #dbf7db; /* verde pastel suave */
 }
 
+/* Estado aprobado */
 .ramo.aprobado {
   text-decoration: line-through;
   opacity: 0.6;
   background-color: #eeeeee !important;
   border-color: #bbb;
+}
+
+/* Estado bloqueado: prerrequisitos no cumplidos */
+.ramo.bloqueado {
+  background-color: #f5f5f5 !important;
+  color: #aaa !important;
+  border: 1px dashed #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
 }
