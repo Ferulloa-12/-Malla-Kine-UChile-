@@ -139,7 +139,6 @@ function crearColumnaAnio(anioNumero, semestres) {
   columna.appendChild(contenedorSemestres);
   mallaContainer.appendChild(columna);
 }
-);
 
 // Crear columna del Año 1 (semestres 1 y 2)
 crearColumnaAnio(1, [1, 2]);
@@ -543,3 +542,10 @@ function actualizarPorcentaje() {
   const porcentaje = ((aprobados / total) * 100).toFixed(1);
   document.getElementById("porcentaje-avance").textContent = `Avance: ${porcentaje}%`;
 }
+document.addEventListener("DOMContentLoaded", function () {
+  crearColumnaAnio(1, [1, 2]);
+  crearColumnaAnio(2, [3, 4]);
+  crearColumnaAnio(3, [5, 6]);
+  crearColumnaAnio(4, [7, 8]);
+  crearColumnaAnio(5, [9, 10]);
+});
