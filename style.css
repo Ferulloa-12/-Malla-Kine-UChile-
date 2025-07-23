@@ -1,79 +1,69 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 0;
 }
 
-h1 {
+.titulo {
   color: fuchsia;
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
-#progreso {
+#porcentaje-avance {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
-  font-size: 1.2em;
-  margin-bottom: 20px;
 }
 
 #malla-container {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  flex-wrap: nowrap;
   overflow-x: auto;
+  gap: 10px;
+  padding-bottom: 30px;
 }
 
-.columna {
-  min-width: 200px;
+.semestre {
+  flex: 0 0 auto;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   padding: 10px;
-  background-color: #e0e0e0;
-  border-radius: 8px;
+  background-color: #f7f7f7;
 }
 
-.columna h2 {
-  font-family: Arial, sans-serif;
-  font-size: 1em;
-  background-color: #d3d3d3;
-  color: black;
-  text-align: center;
-  padding: 4px;
+.semestre h3 {
+  background-color: #e0e0e0;
   margin-top: 0;
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
   border-radius: 4px;
 }
 
 .ramo {
-  background-color: white;
-  margin: 6px 0;
-  padding: 8px;
+  padding: 6px;
+  margin: 5px 0;
   border-radius: 5px;
   cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-size: 0.9em;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  font-size: 14px;
+  border: 1px solid #bbb;
+  transition: all 0.2s;
 }
 
-.ramo.tachado {
+.ramo:hover {
+  transform: scale(1.02);
+}
+
+.obligatorio { background-color: #ffc0cb; }         /* Rosado pastel */
+.investigacion { background-color: #d8bfd8; }       /* Morado pastel */
+.general { background-color: #add8e6; }             /* Celeste pastel */
+.idiomas { background-color: #90ee90; }            /* Verde pastel */
+
+.ramo.aprobado {
   text-decoration: line-through;
-  opacity: 0.6;
-}
-
-.obligatorio {
-  background-color: #ffc0cb; /* rosado pastel */
-}
-
-.investigacion {
-  background-color: #e0bbff; /* morado pastel */
-}
-
-.general {
-  background-color: #b3e5fc; /* celeste pastel */
-}
-
-.idiomas {
-  background-color: #c8e6c9; /* verde pastel */
-}
-
-.ramo.bloqueado {
-  filter: grayscale(100%);
-  cursor: not-allowed;
+  opacity: 0.5;
 }
