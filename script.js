@@ -105,7 +105,6 @@ const ramos = [
 ];
 
 const mallaContainer = document.getElementById("malla-container");
-
 function crearColumnaAnio(anioNumero, semestres) {
   const columna = document.createElement("div");
   columna.className = "anio";
@@ -120,6 +119,7 @@ function crearColumnaAnio(anioNumero, semestres) {
   semestres.forEach(num => {
     const divSemestre = document.createElement("div");
     divSemestre.className = "semestre";
+
     const h3 = document.createElement("h3");
     h3.textContent = `Semestre ${num}`;
     divSemestre.appendChild(h3);
@@ -129,6 +129,12 @@ function crearColumnaAnio(anioNumero, semestres) {
       div.className = `ramo ${ramo.tipo}`;
       div.textContent = ramo.nombre;
       div.dataset.nombre = ramo.nombre;
+
+      // Inicialmente bloqueamos si tiene prerrequisitos
+      if (ramo.prerequisitos.length > 0) {
+        div.classList.add("bloqueado");
+      }
+
       div.onclick = () => toggleAprobado(div, ramo);
       divSemestre.appendChild(div);
     });
@@ -138,6 +144,7 @@ function crearColumnaAnio(anioNumero, semestres) {
 
   columna.appendChild(contenedorSemestres);
   mallaContainer.appendChild(columna);
+}
 } // ← aquí termina correctamente
 
   // PARTE 2 – AÑO 2 (Semestres 3 y 4)
@@ -508,6 +515,7 @@ function toggleAprobado(div, ramo) {
   if (div.classList.contains("aprobado")) {
     div.classList.remove("aprobado");
   } else {
+    // Verifica prerrequisitos
     const ok = ramo.prerequisitos.every(pr => {
       const elem = [...document.querySelectorAll(".ramo")].find(d => d.dataset.nombre === pr);
       return elem && elem.classList.contains("aprobado");
@@ -518,6 +526,8 @@ function toggleAprobado(div, ramo) {
     }
     div.classList.add("aprobado");
   }
+
+  actualizarBloqueados();
   actualizarPorcentaje();
 }
 
@@ -534,3 +544,23 @@ document.addEventListener("DOMContentLoaded", function () {
   crearColumnaAnio(4, [7, 8]);
   crearColumnaAnio(5, [9, 10]);
 });
+function actualizarBloqueados() {
+  document.querySelectorAll(".ramo").forEach(div => {
+    const nombre = div.dataset.nombre;
+    const ramo = ramos.find(r => r.nombre === nombre);
+
+    if (ramo.prerequisitos.length === 0) {
+      div.classList.remove("bloqueado");
+    } else {
+      const ok = ramo.prerequisitos.every(pr => {
+        const prDiv = [...document.querySelectorAll(".ramo")].find(d => d.dataset.nombre === pr);
+        return prDiv && prDiv.classList.contains("aprobado");
+      });
+      if (ok) {
+        div.classList.remove("bloqueado");
+      } else {
+        div.classList.add("bloqueado");
+      }
+    }
+  });
+}
