@@ -144,7 +144,6 @@ function crearColumnaAnio(anioNumero, semestres) {
 
   columna.appendChild(contenedorSemestres);
   mallaContainer.appendChild(columna);
-}
 } // ← aquí termina correctamente
 
   // PARTE 2 – AÑO 2 (Semestres 3 y 4)
