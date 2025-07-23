@@ -1,494 +1,419 @@
 const malla = [
-  {
-    "titulo": "1° Año - I Semestre",
-    "ramos": [
-      {
-        "nombre": "BASES INTEGRADAS DE QUÍMICA, BIOQUÍMICA, BIOLOGÍA CELULAR Y GENÉTICA",
-        "codigo": "bases_integradas_1",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "FÍSICA",
-        "codigo": "fisica_1",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "INTRODUCCIÓN A LA KINESIOLOGÍA",
-        "codigo": "intro_kine",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "ANATOMÍA ESTRUCTURAL Y FUNCIONAL I",
-        "codigo": "anato_1",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "ESTRUCTURA Y FUNCIÓN TISULAR",
-        "codigo": "tisular",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "ESTRATEGIAS DE BÚSQUEDA BIBLIOGRÁFICA",
-        "codigo": "busqueda_biblio",
-        "tipo": "investigacion",
-        "prerreq": []
-      },
-      {
-        "nombre": "CURSOS DE FORMACIÓN GENERAL",
-        "codigo": "form_gen_1",
-        "tipo": "formacion_general",
-        "prerreq": []
-      },
-      {
-        "nombre": "INGLÉS I",
-        "codigo": "ingles_1",
-        "tipo": "idiomas",
-        "prerreq": []
-      }
-    ]
-  },
-  {
-    "titulo": "1° Año - II Semestre",
-    "ramos": [
-      {
-        "nombre": "PRINCIPIOS DE EVOLUCIÓN",
-        "codigo": "evolucion",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "FISIOLOGÍA GENERAL",
-        "codigo": "fisio_general",
-        "tipo": "obligatorio",
-        "prerreq": ["bases_integradas_1", "fisica_1"]
-      },
-      {
-        "nombre": "NEUROANATOMÍA",
-        "codigo": "neuroanato",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "ANATOMÍA ESTRUCTURAL Y FUNCIONAL II",
-        "codigo": "anato_2",
-        "tipo": "obligatorio",
-        "prerreq": ["anato_1"]
-      },
-      {
-        "nombre": "INTRODUCCIÓN AL ESTUDIO DEL MOVIMIENTO HUMANO",
-        "codigo": "mov_humano",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "BIOMECÁNICA, LESIÓN Y REPARACIÓN TISULAR",
-        "codigo": "biomecanica",
-        "tipo": "obligatorio",
-        "prerreq": ["tisular"]
-      },
-      {
-        "nombre": "LECTURA COMPRENSIVA DE ARTICULOS CIENTÍFICOS",
-        "codigo": "lectura_comp",
-        "tipo": "investigacion",
-        "prerreq": []
-      },
-      {
-        "nombre": "CURSOS DE FORMACIÓN GENERAL",
-        "codigo": "form_gen_2",
-        "tipo": "formacion_general",
-        "prerreq": []
-      },
-      {
-        "nombre": "INGLÉS II",
-        "codigo": "ingles_2",
-        "tipo": "idiomas",
-        "prerreq": ["ingles_1"]
-      }
-        {
-    "titulo": "2° Año - III Semestre",
-    "ramos": [
-      {
-        "nombre": "EXAMEN KINÉSICO BÁSICO",
-        "codigo": "examen_kinesico",
-        "tipo": "obligatorio",
-        "prerreq": ["anato_2", "biomecanica"]
-      },
-      {
-        "nombre": "FISIOLOGÍA DE SISTEMAS",
-        "codigo": "fisio_sistemas",
-        "tipo": "obligatorio",
-        "prerreq": ["fisio_general"]
-      },
-      {
-        "nombre": "BASES INTEGRADAS DE INFECTOLOGÍA, INMUNOLOGÍA Y FARMACOLOGÍA",
-        "codigo": "bases_inmuno_farma",
-        "tipo": "obligatorio",
-        "prerreq": ["fisio_general", "neuroanato"]
-      },
-      {
-        "nombre": "CONTROL Y APRENDIZAJE MOTOR",
-        "codigo": "control_motor",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "EDUCACIÓN FÍSICA I",
-        "codigo": "edufis_1",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "FUNDAMENTOS DE LA INVESTIGACIÓN CIENTÍFICA",
-        "codigo": "fund_investigacion",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "INGLÉS III",
-        "codigo": "ingles_3",
-        "tipo": "idiomas",
-        "prerreq": ["ingles_2"]
-      }
-    ]
-  },
-  {
-    "titulo": "2° Año - IV Semestre",
-    "ramos": [
-      {
-        "nombre": "PROCEDIMIENTOS TERAPÉUTICOS BÁSICOS Y GENERALES",
-        "codigo": "procedimientos_basicos",
-        "tipo": "obligatorio",
-        "prerreq": ["examen_kinesico", "mov_humano"]
-      },
-      {
-        "nombre": "FISIOPATOLOGÍA Y FARMACOLOGÍA DE SISTEMAS",
-        "codigo": "fisiofarma_sistemas",
-        "tipo": "obligatorio",
-        "prerreq": ["fisio_sistemas", "bases_inmuno_farma"]
-      },
-      {
-        "nombre": "KINESIOLOGÍA DEL DESARROLLO PSICOMOTOR",
-        "codigo": "kine_desarrollo",
-        "tipo": "obligatorio",
-        "prerreq": ["control_motor"]
-      },
-      {
-        "nombre": "ANÁLISIS BIOINSTRUMENTAL DEL MOVIMIENTO HUMANO",
-        "codigo": "analisis_bioinstrumental",
-        "tipo": "obligatorio",
-        "prerreq": []
-      },
-      {
-        "nombre": "EXAMEN DE LA CONDICIÓN FÍSICA Y LA CONDUCTA MOTORA",
-        "codigo": "condicion_fisica",
-        "tipo": "obligatorio",
-        "prerreq": ["examen_kinesico"]
-      },
-      {
-        "nombre": "ANÁLISIS EPIDEMIOLÓGICO",
-        "codigo": "analisis_epidemiologico",
-        "tipo": "investigacion",
-        "prerreq": []
-      },
-      {
-        "nombre": "LECTURA CRÍTICA DE ARTÍCULOS CIENTÍFICOS",
-        "codigo": "lectura_critica",
-        "tipo": "investigacion",
-        "prerreq": []
-      },
-      {
-        "nombre": "INGLÉS IV",
-        "codigo": "ingles_4",
-        "tipo": "idiomas",
-        "prerreq": ["ingles_3"]
-      }
-        {
-    "titulo": "3° Año - V Semestre",
-    "ramos": [
-      {
-        "nombre": "EVALUACIÓN E INTERVENCIÓN EN CUIDADOS RESPIRATORIOS I",
-        "codigo": "eval_respiratorio_i",
-        "tipo": "obligatorio",
-        "prerreq": ["condicion_fisica", "fisiofarma_sistemas"]
-      },
-      {
-        "nombre": "EVALUACIÓN E INTERVENCIÓN EN NEUROKINESIOLOGÍA I",
-        "codigo": "eval_neuro_i",
-        "tipo": "obligatorio",
-        "prerreq": ["kine_desarrollo"]
-      },
-      {
-        "nombre": "EVALUACIÓN E INTERVENCIÓN EN MÚSCULOESQUELÉTICO I",
-        "codigo": "eval_musculo_i",
-        "tipo": "obligatorio",
-        "prerreq": ["procedimientos_basicos"]
-      },
-      {
-        "nombre": "EFECTOS DE LA ACTIVIDAD FÍSICA EN LA SALUD",
-        "codigo": "efectos_act_fisica",
-        "tipo": "obligatorio",
-        "prerreq": ["fisiofarma_sistemas", "condicion_fisica"]
-      },
-      {
-        "nombre": "EDUCACIÓN FÍSICA II",
-        "codigo": "edufis_2",
-        "tipo": "obligatorio",
-        "prerreq": ["edufis_1"]
-      },
-      {
-        "nombre": "ANÁLISIS DEL MODELO DE SALUD CHILENO",
-        "codigo": "modelo_salud_chileno",
-        "tipo": "investigacion",
-        "prerreq": ["analisis_epidemiologico"]
-      },
-      {
-        "nombre": "REVISIÓN BIBLIOGRÁFICA",
-        "codigo": "revision_biblio",
-        "tipo": "investigacion",
-        "prerreq": ["lectura_critica"]
-      },
-      {
-        "nombre": "MÓDULO INTEGRADO, INTERDISCIPLINARIO Y MULTIPROFESIONAL I",
-        "codigo": "modulo_integrado_i",
-        "tipo": "formacion_general",
-        "prerreq": []
-      }
-    ]
-  },
-  {
-    "titulo": "3° Año - VI Semestre",
-    "ramos": [
-      {
-        "nombre": "EVALUACIÓN E INTERVENCIÓN EN CUIDADOS RESPIRATORIOS II",
-        "codigo": "eval_respiratorio_ii",
-        "tipo": "obligatorio",
-        "prerreq": ["eval_respiratorio_i"]
-      },
-      {
-        "nombre": "EVALUACIÓN E INTERVENCIÓN EN NEUROKINESIOLOGÍA II",
-        "codigo": "eval_neuro_ii",
-        "tipo": "obligatorio",
-        "prerreq": ["eval_neuro_i"]
-      },
-      {
-        "nombre": "EVALUACIÓN E INTERVENCIÓN EN MÚSCULO-ESQUELÉTICO II",
-        "codigo": "eval_musculo_ii",
-        "tipo": "obligatorio",
-        "prerreq": ["eval_musculo_i"]
-      },
-      {
-        "nombre": "RAZONAMIENTO CLÍNICO",
-        "codigo": "razonamiento_clinico",
-        "tipo": "obligatorio",
-        "prerreq": ["eval_respiratorio_i", "eval_neuro_i", "eval_musculo_i"]
-      },
-      {
-        "nombre": "ACTIVIDAD FÍSICA Y DEPORTES",
-        "codigo": "act_fisica_deportes",
-        "tipo": "obligatorio",
-        "prerreq": ["efectos_act_fisica", "edufis_2"]
-      },
-      {
-        "nombre": "RESPONSABILIDAD DEL EJERCICIO PROFESIONAL",
-        "codigo": "responsabilidad_profesional",
-        "tipo": "investigacion",
-        "prerreq": []
-      },
-      {
-        "nombre": "DISEÑO Y FORMULACIÓN DE PROYECTOS DE INVESTIGACIÓN",
-        "codigo": "diseno_proyectos",
-        "tipo": "investigacion",
-        "prerreq": ["revision_biblio"]
-      },
-      {
-        "nombre": "CURSOS DE FORMACIÓN GENERAL",
-        "codigo": "form_gen_3",
-        "tipo": "formacion_general",
-        "prerreq": []
-      }
-        {
-    "titulo": "4° Año - VII Semestre",
-    "ramos": [
-      {
-        "nombre": "INTERVENCIÓN PROFESIONAL EN CONTEXTO I",
-        "codigo": "interv_contexto_i",
-        "tipo": "obligatorio",
-        "prerreq": [
-          "efectos_act_fisica",
-          "eval_respiratorio_ii",
-          "eval_neuro_ii",
-          "eval_musculo_ii"
-        ]
-      },
-      {
-        "nombre": "ANÁLISIS DE LA RELACIÓN PERSONA ENTORNO",
-        "codigo": "persona_entorno",
-        "tipo": "obligatorio",
-        "prerreq": [
-          "eval_respiratorio_ii",
-          "eval_neuro_ii",
-          "eval_musculo_ii"
-        ]
-      },
-      {
-        "nombre": "ESTRATEGIAS DEPORTIVAS Y RECREATIVAS",
-        "codigo": "estrategias_deportivas",
-        "tipo": "obligatorio",
-        "prerreq": ["act_fisica_deportes"]
-      },
-      {
-        "nombre": "DETERMINANTES SOCIALES DE LA SALUD",
-        "codigo": "determinantes_salud",
-        "tipo": "investigacion",
-        "prerreq": ["modelo_salud_chileno"]
-      },
-      {
-        "nombre": "CONCEPTOS BÁSICOS DE ADMINISTRACIÓN EN SALUD",
-        "codigo": "admin_basica_salud",
-        "tipo": "investigacion",
-        "prerreq": ["modelo_salud_chileno"]
-      },
-      {
-        "nombre": "EJECUCIÓN DE PROYECTOS DE INVESTIGACION I",
-        "codigo": "ejecucion_i",
-        "tipo": "investigacion",
-        "prerreq": ["diseno_proyectos"]
-      },
-      {
-        "nombre": "METODOLOGÍAS DE ENSEÑANZA APRENDIZAJE",
-        "codigo": "metodologias_ensenanza",
-        "tipo": "investigacion",
-        "prerreq": []
-      },
-      {
-        "nombre": "CURSOS DE FORMACIÓN GENERAL",
-        "codigo": "form_gen_4",
-        "tipo": "formacion_general",
-        "prerreq": []
-      }
-    ]
-  },
-  {
-    "titulo": "4° Año - VIII Semestre",
-    "ramos": [
-      {
-        "nombre": "INTERVENCIÓN PROFESIONAL EN CONTEXTO II",
-        "codigo": "interv_contexto_ii",
-        "tipo": "obligatorio",
-        "prerreq": [
-          "eval_respiratorio_ii",
-          "eval_neuro_ii",
-          "eval_musculo_ii"
-        ]
-      },
-      {
-        "nombre": "EVALUACIÓN ERGONÓMICA",
-        "codigo": "eval_ergonomica",
-        "tipo": "obligatorio",
-        "prerreq": ["persona_entorno"]
-      },
-      {
-        "nombre": "ESTRATEGIAS DEPORTIVAS Y RECREATIVAS APLICADAS",
-        "codigo": "estrategias_aplicadas",
-        "tipo": "obligatorio",
-        "prerreq": ["estrategias_deportivas"]
-      },
-      {
-        "nombre": "PROGRAMAS DE PROMOCIÓN Y PREVENCIÓN EN SALUD",
-        "codigo": "programas_promocion",
-        "tipo": "investigacion",
-        "prerreq": ["determinantes_salud"]
-      },
-      {
-        "nombre": "PROYECTOS DE EMPRENDIMIENTO",
-        "codigo": "proyectos_emprendimiento",
-        "tipo": "investigacion",
-        "prerreq": ["admin_basica_salud"]
-      },
-      {
-        "nombre": "EJECUCIÓN DE PROYECTOS DE INVESTIGACIÓN II",
-        "codigo": "ejecucion_ii",
-        "tipo": "investigacion",
-        "prerreq": ["ejecucion_i"]
-      },
-      {
-        "nombre": "APLICACIÓN BÁSICA DE METODOLOGÍAS DOCENTES",
-        "codigo": "aplicacion_docente",
-        "tipo": "investigacion",
-        "prerreq": ["metodologias_ensenanza"]
-      },
-      {
-        "nombre": "MÓDULO INTEGRADO, INTERDISCIPLINARIO Y MULTIPROFESIONAL II",
-        "codigo": "modulo_integrado_ii",
-        "tipo": "formacion_general",
-        "prerreq": ["modulo_integrado_i"]
-      }
-        {
-    "titulo": "5° Año - IX Semestre",
-    "ramos": [
-      {
-        "nombre": "INTERVENCIÓN PROFESIONAL I",
-        "codigo": "interv_profesional_i",
-        "tipo": "obligatorio",
-        "prerreq": ["interv_contexto_ii"]
-      },
-      {
-        "nombre": "PROYECTOS DE INTERVENCIÓN ERGONÓMICA",
-        "codigo": "proyectos_ergonomica",
-        "tipo": "obligatorio",
-        "prerreq": ["eval_ergonomica"]
-      },
-      {
-        "nombre": "COMUNICACIÓN CIENTÍFICA",
-        "codigo": "comunicacion_cientifica",
-        "tipo": "obligatorio",
-        "prerreq": ["ejecucion_ii"]
-      }
-    ]
-  },
-  {
-    "titulo": "5° Año - X Semestre",
-    "ramos": [
-      {
-        "nombre": "INTERVENCIÓN PROFESIONAL II",
-        "codigo": "interv_profesional_ii",
-        "tipo": "obligatorio",
-        "prerreq": ["interv_profesional_i"]
-      },
-      {
-        "nombre": "CURSOS DE PROFUNDIZACIÓN DISCIPLINAR Y PROFESIONAL",
-        "codigo": "profundizacion_disciplinar",
-        "tipo": "obligatorio",
-        "prerreq": ["interv_contexto_i", "interv_contexto_ii"]
-      },
-      {
-        "nombre": "INTERVENCIÓN EN SALUD COMUNITARIA",
-        "codigo": "interv_comunitaria",
-        "tipo": "investigacion",
-        "prerreq": ["programas_promocion"]
-      },
-      {
-        "nombre": "ADMINISTRACIÓN EN SALUD",
-        "codigo": "admin_salud",
-        "tipo": "investigacion",
-        "prerreq": ["admin_basica_salud"]
-      }
-    ]
-  }
+{
+"titulo": "1° Año - I Semestre", "ramos": [
+{
+"codigo": "bioqu_mica_", "nombre": "Bioquímica,", "tipo": "obligatorio", "prerreq": [
+"inmunolog_a_2"
+]
+},
+{
+"codigo": "introducci_n", "nombre": "Introducción", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "kinesiolog_a", "nombre": "Kinesiología", "tipo": "obligatorio", "prerreq": [
+"neuroanatom_a"
+]
+},
+{
+"codigo": "estructural", "nombre": "Estructural", "tipo": "obligatorio", "prerreq": [
+"profesional_2", "estructural_2", "profundizaci_n"
+]
+},
+{
+"codigo": "estrategias", "nombre": "Estrategias", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "bibliogr_fica", "nombre": "Bibliográfica", "tipo": "obligatorio", "prerreq": [
+"formulaci_n_2", "_evaluaci_n_2", "_fisiolog_a", "bioqu_mica 2"
+]
+},
+{
+"codigo": "bioqu_mica 2", "nombre": "Bioquímica,", "tipo": "obligatorio", "prerreq": [
+"inmunolog_a_2"
+]
+},
+{
+"codigo": "neuroanatom_a", "nombre": "Neuroanatomía",
+
+"prerreq": [ "neuroanatom_a"
+]
+},
+{
+"codigo": "estructural_2", "nombre": "Estructural", "tipo": "obligatorio", "prerreq": [
+"profesional_2", "neuroanatom_a"
+]
+},
+{
+"codigo": "estructural", "nombre": "Estructural", "tipo": "obligatorio", "prerreq": [
+"profesional_2"
+]
+}
+]
+},
+{
+"titulo": "1° Año - II Semestre", "ramos": [
+{
+"codigo": "introducci_n_2", "nombre": "Introducción", "tipo": "obligatorio", "prerreq": [
+"procedimientos"
+]
+},
+{
+"codigo": "biomec_nica_", "nombre": "Biomecánica,", "tipo": "obligatorio", "prerreq": [
+"_evaluaci_n_2", "estructural_2", "profundizaci_n", "estructural_2"
+]
+},
+{
+"codigo": "comprensiva", "nombre": "Comprensiva", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "cient_ficos", "nombre": "Científicos", "tipo": "idiomas", "prerreq": [
+"formulaci_n_2", "kinesiolog_a_2", "neuroanatom_a"
+]
+},
+{
+"codigo": "estructural_2", "nombre": "Estructural",
+
+"prerreq": [ "profesional_2"
+]
+},
+{
+"codigo": "_biomec_nica_", "nombre": "-Biomecánica,", "tipo": "obligatorio", "prerreq": [
+"_evaluaci_n_2", "_fisiolog_a"
+]
+},
+{
+"codigo": "_fisiolog_a", "nombre": "-Fisiología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "infectolog_a_", "nombre": "Infectología,", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "inmunolog_a", "nombre": "Inmunología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "farmacolog_a", "nombre": "Farmacología", "tipo": "obligatorio", "prerreq": []
+}
+]
+},
+{
+"titulo": "2° Año - I Semestre", "ramos": [
+{
+"codigo": "_fisiolog_a_2", "nombre": "-Fisiología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_neuroanatom_a", "nombre": "-Neuroanatomía", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "aprendizaje", "nombre": "Aprendizaje", "tipo": "obligatorio", "prerreq": [
+"_evaluaci_n_2"
+]
+},
+{
+"codigo": "fundamentos", "nombre": "Fundamentos",
+
+"tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "investigaci_n", "nombre": "Investigación", "tipo": "idiomas", "prerreq": [
+"cient_ficos"
+]
+},
+{
+"codigo": "procedimientos", "nombre": "Procedimientos", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "terap_uticos", "nombre": "Terapéuticos", "tipo": "obligatorio", "prerreq": [
+"kinesiolog_a_2"
+]
+},
+{
+"codigo": "_introducci_n", "nombre": "-Introducción", "tipo": "obligatorio", "prerreq": [
+"procedimientos"
+]
+},
+{
+"codigo": "fisiopatolog_a", "nombre": "Fisiopatología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "farmacolog_a_2", "nombre": "Farmacología", "tipo": "obligatorio", "prerreq": []
+}
+]
+},
+{
+"titulo": "2° Año - II Semestre", "ramos": [
+{
+"codigo": "_fisiolog_a", "nombre": "-Fisiología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "infectolog_a 2", "nombre": "Infectología,", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "inmunolog_a_2", "nombre": "Inmunología",
+
+"tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "farmacolog_a", "nombre": "Farmacología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "kinesiolog_a_2", "nombre": "Kinesiología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "aprendizaje_2", "nombre": "Aprendizaje", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "bioinstrumental", "nombre": "Bioinstrumental", "tipo": "obligatorio", "prerreq": [
+"procedimientos", "comunicaci_n", "kinesiolog_a_2"
+]
+},
+{
+"codigo": "epidemiol_gico", "nombre": "Epidemiológico", "tipo": "investigacion", "prerreq": [
+"estructural_2"
+]
+},
+{
+"codigo": "cient_ficos_2", "nombre": "Científicos", "tipo": "idiomas", "prerreq": [
+"_evaluaci_n_2"
+]
+},
+{
+"codigo": "intervenci_n", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+}
+]
+},
+{
+"titulo": "3° Año - I Semestre", "ramos": [
+{
+"codigo": "respiratorios", "nombre": "Respiratorios", "tipo": "obligatorio", "prerreq": [
+"comunicaci_n"
+]
+
+},
+{
+"codigo": "_fisiopatolog_a", "nombre": "-Fisiopatología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "farmacolog_a_2", "nombre": "Farmacología", "tipo": "obligatorio", "prerreq": [
+"_evaluaci_n_2"
+]
+},
+{
+"codigo": "intervenci_n_2", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "neurokinesiolog_a", "nombre": "Neurokinesiología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_kinesiolog_a", "nombre": "-Kinesiología", "tipo": "obligatorio", "prerreq": [
+"_evaluaci_n_2"
+]
+},
+{
+"codigo": "intervenci_n", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "m_sculoesquel_tico", "nombre": "Músculoesquelético", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_procedimientos", "nombre": "-Procedimientos", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "terap_uticos_2", "nombre": "Terapéuticos", "tipo": "obligatorio", "prerreq": []
+}
+]
+},
+{
+"titulo": "3° Año - II Semestre", "ramos": [
+{
+
+"codigo": "_fisiopatolog_a_2", "nombre": "-Fisiopatología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "farmacolog_a", "nombre": "Farmacología", "tipo": "obligatorio", "prerreq": [
+"comunicaci_n", "_evaluaci_n_2", "_evaluaci_n_2"
+]
+},
+{
+"codigo": "epidemiol_gico_2", "nombre": "Epidemiológico", "tipo": "investigacion", "prerreq": []
+},
+{
+"codigo": "bibliogr_fica_2", "nombre": "Bibliográfica", "tipo": "obligatorio", "prerreq": [
+"estructural_2"
+]
+},
+{
+"codigo": "cient_ficos", "nombre": "Científicos", "tipo": "investigacion", "prerreq": []
+},
+{
+"codigo": "interdisciplinario", "nombre": "Interdisciplinario", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "multiprofesional", "nombre": "Multiprofesional", "tipo": "general",
+"prerreq": [ "_evaluaci_n_2"
+]
+},
+{
+"codigo": "intervenci_n_2", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "respiratorios_2", "nombre": "Respiratorios", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_evaluaci_n", "nombre": "-Evaluación", "tipo": "obligatorio",
+
+"prerreq": []
+}
+]
+},
+{
+"titulo": "4° Año - I Semestre", "ramos": [
+{
+"codigo": "intervenci_n", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "respiratorios", "nombre": "Respiratorios", "tipo": "obligatorio", "prerreq": [
+"_evaluaci_n_2"
+]
+},
+{
+"codigo": "intervenci_n_2", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "neurokinesiolog_a_2", "nombre": "Neurokinesiología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_evaluaci_n_2", "nombre": "-Evaluación", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "intervenci_n", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "neurokinesiolog_a", "nombre": "Neurokinesiología", "tipo": "obligatorio", "prerreq": [
+"_evaluaci_n_2"
+]
+},
+{
+"codigo": "intervenci_n_2", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_evaluaci_n", "nombre": "-Evaluación",
+
+{
+"codigo": "intervenci_n", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+}
+]
+},
+{
+"titulo": "4° Año - II Semestre", "ramos": [
+{
+"codigo": "m_sculo_esquel_tico", "nombre": "Músculo-Esquelético", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "m_sculoesquel_tico_2", "nombre": "Músculoesquelético", "tipo": "obligatorio",
+"prerreq": []
+},
+{
+"codigo": "razonamiento", "nombre": "Razonamiento", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_evaluaci_n_2", "nombre": "-Evaluación", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "intervenci_n_2", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "respiratorios_2", "nombre": "Respiratorios", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_evaluaci_n", "nombre": "-Evaluación", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "intervenci_n", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "neurokinesiolog_a_2", "nombre": "Neurokinesiología",
+
+{
+"codigo": "_evaluaci_n_2", "nombre": "-Evaluación", "tipo": "obligatorio", "prerreq": []
+}
+]
+},
+{
+"titulo": "5° Año - I Semestre", "ramos": [
+{
+"codigo": "intervenci_n_2", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "m_sculoesquel_tico", "nombre": "Músculoesquelético", "tipo": "obligatorio", "prerreq": [
+"_evaluaci_n_2"
+]
+},
+{
+"codigo": "responsabilidad", "nombre": "Responsabilidad", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "profesional", "nombre": "Profesional", "tipo": "investigacion", "prerreq": []
+},
+{
+"codigo": "formulaci_n", "nombre": "Formulación", "tipo": "obligatorio", "prerreq": [
+"procedimientos"
+]
+},
+{
+"codigo": "investigaci_n_2", "nombre": "Investigación", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "bibliogr_fica", "nombre": "Bibliográfica", "tipo": "general", "prerreq": [
+"formulaci_n_2"
+]
+},
+{
+"codigo": "intervenci_n", "nombre": "Intervención",
+
+{
+"codigo": "profesional_2", "nombre": "Profesional", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_evaluaci_n", "nombre": "-Evaluación", "tipo": "obligatorio", "prerreq": []
+}
+]
+},
+{
+"titulo": "5° Año - II Semestre", "ramos": [
+{
+"codigo": "intervenci_n_2", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "respiratorios", "nombre": "Respiratorios", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_evaluaci_n_2", "nombre": "-Evaluación", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "intervenci_n", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "neurokinesiolog_a", "nombre": "Neurokinesiología", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "_evaluaci_n", "nombre": "-Evaluación", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "intervenci_n_2", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "m_sculo_esquel_tico_2", "nombre": "Músculo-Esquelético", "tipo": "obligatorio",
+"prerreq": [ "formulaci_n_2",
+
+"profesional_2"
+]
+},
+{
+"codigo": "_evaluaci_n_2", "nombre": "-Evaluación", "tipo": "obligatorio", "prerreq": []
+},
+{
+"codigo": "intervenci_n", "nombre": "Intervención", "tipo": "obligatorio", "prerreq": []
+}
+]
+}
 ];
-    
-  },
-    ]
-  },
-    ]
-  },
-    ]
-  },
-
-
-  
