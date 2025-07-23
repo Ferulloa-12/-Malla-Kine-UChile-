@@ -235,7 +235,7 @@ ramos.push(
 
 // Crear columna del Año 2 (semestres 3 y 4)
 crearColumnaAnio(2, [3, 4]);
-}
+
 // PARTE 3 – AÑO 3 (Semestres 5 y 6)
 ramos.push(
   {
